@@ -59,7 +59,7 @@ Accuracy of Logistic regression model is 94.7%
 A Decision Tree classifier is used with binary or multiclass target variables. Decision Trees can handle both categorical and numerical features
 This model is easy to understand and visualize.
 
-Code
+# Code
 Importing libraries
       from sklearn.tree import DecisionTreeClassifier
       tree_model1=DecisionTreeClassifier()
@@ -85,7 +85,7 @@ The tree is plotted using the following code :
 This model gives high accuracy and reduces overfitting. 
 It can handle dataset with many features.
 
-Code
+# Code
 Importing libraries :
         from sklearn.ensemble import RandomForestClassifier,BaggingClassifier,AdaBoostClassifier,GradientBoostingClassifier
         rclf=RandomForestClassifier()
@@ -120,7 +120,7 @@ SVMs are effective in high-dimensional spaces.
 It helps reducing overfitting.
 By choosing appropriate kernels, SVMs can model complex decision boundaries, making them suitable for datasets where the decision boundary between classes is not linear.
 
-Code
+# Code
 Importing libraries
              from sklearn.svm import SVC
             svc_model=SVC(kernel='rbf',C=3)
@@ -135,7 +135,7 @@ After cross validation and hyperparameter tuning, best f1 score is 91%
 It classifies a data point based on the majority class among its k-nearest neighbors.
 It makes no assumptions about the underlying data distribution.
 
-Code
+# Code
 Importing libraries
             from sklearn.neighbors import KNeighborsClassifier
 
@@ -153,7 +153,7 @@ Naive Bayes can handle missing data by simply ignoring the missing values during
 * Multinomial Naive Bayes : Suitable for discrete data.
 * Bernoulli Naive Bayes : Suitable for boolean or binary features.
 
-Code
+# Code
 Importing libraries
               from sklearn.naive_bayes import GaussianNB
               classifier = GaussianNB()
