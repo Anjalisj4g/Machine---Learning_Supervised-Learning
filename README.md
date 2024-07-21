@@ -193,5 +193,5 @@ KNN : 95%
 
 Naive Bayes : 97%
 
-# Comparing all the models, XG Boost and Naive Bayes performs best and Logistic Regression Model performs worse.
+Comparing all the models, XG Boost and Naive Bayes performs best and Logistic Regression Model performs worse.
 
