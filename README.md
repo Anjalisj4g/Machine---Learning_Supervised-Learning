@@ -6,20 +6,24 @@ Breast cancer dataset available in the sklearn library.
 
 # Data Preprocessing :
 Firstly, the data is loaded from sklearn site.
+
       from sklearn.datasets import load_breast_cancer
 
 Features and targets are assigned to variables x and y respectively. 
 
 * For data preprocessing, missing values are calculated.
+  
       missing_values=X.isnull().sum()
       print(missing_values)
 
 * Duplicate values are removed.
+  
       X.drop_duplicates(inplace=True)
 
 * Encoding By Feature Scaling :
-      from sklearn.preprocessing import StandardScaler
-      scaler=StandardScaler()
+
+        from sklearn.preprocessing import StandardScaler
+        scaler=StandardScaler()
 
 Data preprocessing plays a vital role in machine learning. 
 It helps in missing values.
@@ -41,15 +45,18 @@ So, it is suitable for this model.
 
 # Code
 Importing libraries
+
       from sklearn.linear_model import LogisticRegression
       model=LogisticRegression()
       from sklearn.model_selection import train_test_split
 
 Split the dataset into training and testing sets and train the regresser.
+
       X_train, X_test, y_train, y_test=train_test_split(cancer.data, cancer.target, test_size=0.2)
       model.fit(X_train, y_train)
       
 Accuracy of the model is calculated :
+
       model.score(X_test, y_test)
 
 Accuracy of Logistic regression model is 94.7%
@@ -61,13 +68,16 @@ This model is easy to understand and visualize.
 
 # Code
 Importing libraries
+
       from sklearn.tree import DecisionTreeClassifier
       tree_model1=DecisionTreeClassifier()
 
 Train the classifier
+
       tree_model1.fit(X_train, y_train)
 
 The tree is plotted using the following code :
+
       from sklearn import tree
       plt.figure(figsize=(25,20))
       tree.plot_tree(tree_model1, filled=True)
@@ -106,13 +116,14 @@ print(accuracy_score(y_test,rclf_pred))
 * XG Boost
 
 Comparing Random forest model, adaBoost, Gradient Boost, XG boost and Bagging classifier :
+
 Highest Accuracy : XG Boost (97%), Random Forest (96%), Gradient Boost (96%)
 
 Highest Precision : XG Boost (97%), Random Forest (97%)
 
 Highest recall : Ada Boost, XG Boost
 
-Highest fi score : XG Boost
+Highest f1 score : XG Boost
 # Comparing the above models, XG boost shows best result with 97% accuracy and 97% precision.
 
 # 4. Support Vector Machine (SVM)
@@ -122,6 +133,7 @@ By choosing appropriate kernels, SVMs can model complex decision boundaries, mak
 
 # Code
 Importing libraries
+
              from sklearn.svm import SVC
             svc_model=SVC(kernel='rbf',C=3)
             svc_model.fit(X_train, y_train)
@@ -137,13 +149,14 @@ It makes no assumptions about the underlying data distribution.
 
 # Code
 Importing libraries
+
             from sklearn.neighbors import KNeighborsClassifier
 
 Accuracy is 95.6%
 
-After Parameter tuning, accuracy is 96% and numberof neighbours = 9
+After Parameter tuning, accuracy is 96% and number of neighbours = 9
 
-6. Naive Bayes
+# 6. Naive Bayes
 They require a small amount of training data to estimate the parameters.
 Handles irrelevant features.
 Naive Bayes can handle missing data by simply ignoring the missing values during probability estimation.
@@ -155,12 +168,13 @@ Naive Bayes can handle missing data by simply ignoring the missing values during
 
 # Code
 Importing libraries
+
               from sklearn.naive_bayes import GaussianNB
               classifier = GaussianNB()
 
 Accuracy is 97.3%
 
-Comparing Performance of the models
+# Comparing Performance of the models
 Accuracies : Logistic Regression Model : 94.7 % , Decision Tree Model : 95.7%
 
 Comparing Random forest model, adaBoost, Gradient Boost, XG boost and Bagging classifier :
@@ -171,7 +185,7 @@ Highest Precision : XG Boost (97%), Random Forest (97%)
 
 Highest recall : Ada Boost, XG Boost
 
-Highest fi score : XG Boost
+Highest f1 score : XG Boost
 
 SVM : 95%
 
